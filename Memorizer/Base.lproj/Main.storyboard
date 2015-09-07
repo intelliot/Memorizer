@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v4p-5y-Emg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Memorizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,147 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="uvs-El-waf">
+                                <rect key="frame" x="20" y="57" width="560" height="485"/>
+                                <string key="text">I want you by my side
+So that I never feel alone again
+They've always been so kind
+But now they've brought you away from me
+I hope they didn't get your mind
+Your heart is too strong, anyway
+We need to fetch back the time
+They have stolen from us
+
+I want you
+We can bring it on the floor
+Never danced like this before
+We don't talk about it
+Dancing on, do the boogie all night long
+Stoned in paradise
+Shouldn't talk about it
+
+I want you
+We can bring it on the floor
+Never danced like this before
+We don't talk about it
+Dancing on, do the boogie all night long
+Stoned in paradise
+Shouldn't talk about it
+
+Shouldn't talk about it
+
+Coldest winter for me
+No sun is shining anymore
+The only thing I feel is pain
+Caused by absence of you
+Suspense controlling my mind
+I cannot find the way out of here
+
+I want you by my side
+So that I never feel alone again
+
+I want you
+We can bring it on the floor
+Never danced like this before
+We don't talk about it
+Dancing on, do the boogie all night long
+Stoned in paradise
+Shouldn't talk about it
+
+I want you
+We can bring it on the floor
+Never danced like this before
+We don't talk about it
+Dancing on, do the boogie all night long
+Stoned in paradise
+Shouldn't talk about it
+
+Shouldn't talk about it
+
+I want you
+We can bring it on the floor
+Never danced like this before
+We don't talk about it
+Dancing on, do the boogie all night long
+Stoned in paradise
+Shouldn't talk about it
+
+I want you
+We can bring it on the floor
+Never danced like this before
+We don't talk about it
+Dancing on, do the boogie all night long
+Stoned in paradise
+Shouldn't talk about it
+
+Shouldn't talk about it</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="H2p-72-RzC"/>
+                                </connections>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uvs-El-waf" secondAttribute="trailing" id="6Tu-VU-stA"/>
+                            <constraint firstItem="uvs-El-waf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D1b-hH-3Vm"/>
+                            <constraint firstItem="uvs-El-waf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GZt-De-ndd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uvs-El-waf" secondAttribute="bottom" id="HE3-GK-NWu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="uvs-El-waf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6Tu-VU-stA"/>
+                                <exclude reference="D1b-hH-3Vm"/>
+                                <exclude reference="GZt-De-ndd"/>
+                                <exclude reference="HE3-GK-NWu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="uvs-El-waf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6Tu-VU-stA"/>
+                                <include reference="D1b-hH-3Vm"/>
+                                <include reference="GZt-De-ndd"/>
+                                <include reference="HE3-GK-NWu"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="oVR-E5-H9F"/>
+                    <connections>
+                        <outlet property="textView" destination="uvs-El-waf" id="DOk-Dd-bYP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1257" y="389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PY8-m3-IO6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v4p-5y-Emg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dOe-gr-nMe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0lc-wL-taL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ArC-iy-Ehu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="389"/>
         </scene>
     </scenes>
 </document>

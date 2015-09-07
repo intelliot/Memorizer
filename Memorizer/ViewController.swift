@@ -8,11 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        let keyboardRectValue = notification.userInfo![UIKeyboardFrameEndUserInfoKey]!
+        
+        var keyboardRect = CGRectZero
+        keyboardRectValue.getValue(&keyboardRect)
+        
+        textView.contentInset = UIEdgeInsetsMake(0, 0, keyboardRect.size.height, 0)
+        textView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, keyboardRect.size.height, 0)
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        textView.contentInset = UIEdgeInsetsZero
+        textView.scrollIndicatorInsets = UIEdgeInsetsZero
     }
 
     override func didReceiveMemoryWarning() {
