@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Memorizer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Memorizer" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,7 +93,7 @@ Shouldn't talk about it</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="H2p-72-RzC"/>
@@ -130,7 +130,13 @@ Shouldn't talk about it</string>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="oVR-E5-H9F"/>
+                    <navigationItem key="navigationItem" title="Memorizer" id="oVR-E5-H9F">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="uLw-Yv-ECe">
+                            <connections>
+                                <action selector="doneTapped:" destination="BYZ-38-t0r" id="b5Q-SI-qAX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="textView" destination="uvs-El-waf" id="DOk-Dd-bYP"/>
                     </connections>
